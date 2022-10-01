@@ -1,0 +1,39 @@
+<div class="container" *ngIf="!showHomePage">
+  <h1>WrestleBet</h1>
+  <p>Our mission is to create a space where fans can bet against each other. For far too long has there been a bookie in
+    place to make money off of the fans. We want to empower people to create a social network and place bets with their
+    friends
+    and rivals. Bet safe, and bet on!</p>
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <p>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Username" formControlName="username">
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+        </p>
+
+        <div class="button">
+          <button type="submit" mat-button (click)="displayHomePage()">Login</button>
+          <button type="submit" mat-button (click)="displayHomePage()">Sign Up</button>
+        </div>
+
+      </form>
+    </mat-card-content>
+    <!--  <img class='image' src="https://olympics.nbcsports.com/wp-content/uploads/sites/10/2022/09/GettyImages-1235697443-e1663344259440.jpg?w=1013" alt="">-->
+  </mat-card>
+</div>
+
+
+<div class="grid" *ngIf="showHomePage">
+  <selections class="Selections"></selections>
+  <filters class="Filters"></filters>
+  <results class="Results"></results>
+</div>

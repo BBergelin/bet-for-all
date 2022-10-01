@@ -1,0 +1,78 @@
+
+.container {
+  align-content: center;
+  align-items: center;
+  padding: 5em;
+}
+
+.center-align {
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  height: 20em;
+  width: 40em;
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+.button {
+  gap: 3em;
+  display: flex;
+}
+
+.form-field-body {
+  height: 6em;
+  width: 8em;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Selections Filters Filters"
+    "Selections Results Results"
+    "Selections Results Results";
+}
+
+Selections {
+  background-color: blue;
+  grid-area: Selections;
+}
+
+Filters {
+  height: 100%;
+  width: 300px;
+  background-color: pink;
+  grid-area: Filters;
+}
+
+Results {
+  background-color: green;
+  grid-area: Results;
+}
+
